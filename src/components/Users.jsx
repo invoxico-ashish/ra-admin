@@ -8,8 +8,8 @@ export const UserList = (props) => (
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="username" />
-      <EmailField source="email"  />
-      <TextField source="address.street" label="Street Address" />
+      <EmailField source="email" />
+      <TextField source="address.street" label="Street Add " />
       <TextField source="phone" sortable={false} />
       <TextField source="website" />
       <TextField source="company.name" label="Company Name" />
