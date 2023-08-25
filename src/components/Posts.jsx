@@ -1,24 +1,24 @@
 import React from "react";
 import {
-    List,
-    TextInput,
-    SimpleForm,
-    Edit,
-    Create,
-    ReferenceInput,
-    SelectInput,
-    Datagrid,
-    ReferenceField,
-    TextField,
-    EmailField,
-    EditButton,
-    EditGuesser
+  List,
+  TextInput,
+  SimpleForm,
+  Edit,
+  Create,
+  ReferenceInput,
+  SelectInput,
+  Datagrid,
+  ReferenceField,
+  TextField,
+  EmailField,
+  EditButton,
+  EditGuesser,
 } from "react-admin";
 
 export const PostList = (props) => (
   <List {...props}>
-    <Datagrid rowClick="edit">
-      <ReferenceField source="userId" reference="users">
+    <Datagrid rowClick="show ">
+      <ReferenceField source="userId" label="Users" reference="users">
         <TextField source="name" />
       </ReferenceField>
       <TextField source="id" />
@@ -28,24 +28,30 @@ export const PostList = (props) => (
     </Datagrid>
   </List>
 );
-export const PostEdit = props => (
-    <Edit {...props}>
-        <SimpleForm>
-            <ReferenceInput disabled source="userId" reference="users"></ReferenceInput>
-            <TextInput source="id"/>
-            <TextInput source="title"/>
-            <TextInput source="body"/>
-        </SimpleForm>
-    </Edit>
- );
- 
- export const PostCreate = props => (
-    <Create {...props}>
-        <SimpleForm>
-            <ReferenceInput source="userId" reference="users"><SelectInput optionText="id"/></ReferenceInput>
-            <TextInput source="id"/>
-            <TextInput source="title"/>
-            <TextInput source="body"/>
-        </SimpleForm>
-    </Create>
- );
+export const PostEdit = (props) => (
+  <Edit {...props}>
+    <SimpleForm>
+      <ReferenceInput
+        disabled
+        source="userId"
+        reference="users"
+      ></ReferenceInput>
+      <TextInput source="id" />
+      <TextInput source="title" />
+      <TextInput source="body" />
+    </SimpleForm>
+  </Edit>
+);
+
+export const PostCreate = (props) => (
+  <Create {...props}>
+    <SimpleForm>
+      <ReferenceInput source="userId" reference="users">
+        <SelectInput optionText="id" />
+      </ReferenceInput>
+      <TextInput source="id" />
+      <TextInput source="title" />
+      <TextInput source="body" />
+    </SimpleForm>
+  </Create>
+);
