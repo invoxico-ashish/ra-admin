@@ -3,7 +3,6 @@ import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
 import jsonServerProvider from "ra-data-json-server";
 import { UserList, UserCreate, UserEdit } from "./components/Users";
 import { PostList, PostCreate, PostEdit } from "./components/Posts";
-// import { } from "./components/Posts";
 import { AppLayout } from "./layouts/AppLayout";
 import { authProvider } from "./Provider/authProvider";
 import PeopleIcon from "@mui/icons-material/People";
